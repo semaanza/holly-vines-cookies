@@ -1,5 +1,5 @@
 ---
-title: Hello, World!
+title: Stephan Rules!
 ---
 
 ## Hello World!
