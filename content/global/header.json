@@ -1,1 +1,10 @@
-{}
+{
+  "header": {
+    "navItems": [
+      {
+        "href": "about",
+        "linkName": "About"
+      }
+    ]
+  }
+}
