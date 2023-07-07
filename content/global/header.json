@@ -2,7 +2,7 @@
   "header": {
     "navItems": [
       {
-        "href": "about",
+        "href": "/about",
         "linkName": "About"
       }
     ]
