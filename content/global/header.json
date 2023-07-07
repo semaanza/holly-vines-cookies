@@ -1,5 +1,9 @@
 {
   "header": {
+    "logo": {
+      "logoImage": "/logo.png",
+      "logoHref": "/home"
+    },
     "navItems": [
       {
         "href": "/contact",
