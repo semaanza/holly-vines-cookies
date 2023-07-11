@@ -31,10 +31,11 @@ export const GlobalSchema = {
 					label: "Nav Items",
 					type: "object",
 					list: true,
+					ui: { itemProps: ({ linkName: label }) => ({ label }) },
 					fields: [
 						{
 							name: "href",
-							label: "link",
+							label: "Link",
 							type: "string",
 						},
 						{

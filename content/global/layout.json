@@ -1,0 +1,18 @@
+{
+  "header": {
+    "logo": {
+      "logoImage": "/logo.png",
+      "logoHref": "/home"
+    },
+    "navItems": [
+      {
+        "href": "about",
+        "linkName": "About"
+      },
+      {
+        "href": "contact",
+        "linkName": "Contact "
+      }
+    ]
+  }
+}
