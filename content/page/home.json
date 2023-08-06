@@ -10,7 +10,13 @@
     {
       "cookieCards": [
         {
-          "cardTitle": "Pumpkin - TBD"
+          "cardTitle": "Chocolate Chip",
+          "cookieImage": "/0.jpg",
+          "description": "A true classic you can never go wrong with choosing. Each cookie is packed with a boatload of semi-sweet chocolate chips."
+        },
+        {
+          "cardTitle": "M&M",
+          "description": "M&M – Each cookie is packed with an explosion of M&M candy pieces. Need we say more?"
         },
         {
           "cardTitle": "Snickerdoodle - TBD"
@@ -19,19 +25,13 @@
           "cardTitle": "Peanut Butter Chip - TBD"
         },
         {
-          "cardTitle": "Cream Cheese Stuffed Red Velvet - TBD"
-        },
-        {
-          "cardTitle": "Take 5!",
-          "description": "Take a 5-minute break to enjoy this cookie. Inspired by the Take 5 candy bar, each cookie is packed with peanuts, pretzels, and chocolate chips. It’s topped with gooey caramel, melted chocolate and a pretzel."
-        },
-        {
           "cardTitle": "Ultimate Reese's",
           "description": "A peanut butter lover’s dream. Packed with Reese’s cups, Reese’s pieces, and semi-sweet chocolate chips. Each cookie is topped with melted peanut butter chips."
         },
         {
-          "cardTitle": "What's Up Doc",
-          "description": "Carrot cake in cookie form that literally melts in your mouth. Each cookie is topped with cream cheese frosting, freshly grated carrots, and walnuts."
+          "cardTitle": "Cookies & Cream",
+          "cookieImage": "/cream.png",
+          "description": "Packed with Oreo crumbles and white chocolate chips."
         },
         {
           "cardTitle": "Gimmie S'more",
@@ -42,17 +42,18 @@
           "description": "A party in your mouth and an all-time favorite for birthday celebrations. Each cookie is packed with white chocolate chips and rainbow sprinkles."
         },
         {
-          "cardTitle": "M&M",
-          "description": "M&M – Each cookie is packed with an explosion of M&M candy pieces. Need we say more?"
+          "cardTitle": "Cream Cheese Stuffed Red Velvet - TBD"
         },
         {
-          "cardTitle": "Chocolate Chip",
-          "description": "A true classic you can never go wrong with choosing. Each cookie is packed with a boatload of semi-sweet chocolate chips."
+          "cardTitle": "Pumpkin - TBD"
         },
         {
-          "cardTitle": "Cookies & Cream",
-          "cookieImage": "/cream.png",
-          "description": "Packed with Oreo crumbles and white chocolate chips."
+          "cardTitle": "What's Up Doc",
+          "description": "Carrot cake in cookie form that literally melts in your mouth. Each cookie is topped with cream cheese frosting, freshly grated carrots, and walnuts."
+        },
+        {
+          "cardTitle": "Take 5!",
+          "description": "Take a 5-minute break to enjoy this cookie. Inspired by the Take 5 candy bar, each cookie is packed with peanuts, pretzels, and chocolate chips. It’s topped with gooey caramel, melted chocolate and a pretzel."
         }
       ],
       "_template": "cookieCardSection"
