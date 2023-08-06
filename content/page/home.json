@@ -13,7 +13,10 @@
           "cardTitle": "Take 5!",
           "description": "Take a 5-minute break to enjoy this cookie. Inspired by the Take 5 candy bar, each cookie is packed with peanuts, pretzels, and chocolate chips. It’s topped with gooey caramel, melted chocolate and a pretzel."
         },
-        {},
+        {
+          "cardTitle": "Ultimate Reese's",
+          "description": "A peanut butter lover’s dream. Packed with Reese’s cups, Reese’s pieces, and semi-sweet chocolate chips. Each cookie is topped with melted peanut butter chips."
+        },
         {
           "cardTitle": "What's Up Doc",
           "description": "Carrot cake in cookie form that literally melts in your mouth. Each cookie is topped with cream cheese frosting, freshly grated carrots, and walnuts."
