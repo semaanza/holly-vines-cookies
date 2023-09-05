@@ -10,9 +10,56 @@
     {
       "cookieCards": [
         {
+          "cardTitle": "Chocolate Chip",
+          "cookieImage": "/0.jpg",
+          "description": "A true classic you can never go wrong with choosing. Each cookie is packed with a boatload of semi-sweet chocolate chips."
+        },
+        {
+          "cardTitle": "M&M",
+          "description": "M&M – Each cookie is packed with an explosion of M&M candy pieces. Need we say more?"
+        },
+        {
+          "cardTitle": "Snickerdoodle - TBD",
+          "cookieImage": "/unnamed.jpg"
+        },
+        {
+          "cardTitle": "Peanut Butter Chip - TBD",
+          "cookieImage": "/IMG-9817.JPG"
+        },
+        {
+          "cardTitle": "Ultimate Reese's",
+          "cookieImage": "/IMG-7918.jpg",
+          "description": "A peanut butter lover’s dream. Packed with Reese’s cups, Reese’s pieces, and semi-sweet chocolate chips. Each cookie is topped with melted peanut butter chips."
+        },
+        {
           "cardTitle": "Cookies & Cream",
-          "cookieImage": "/cream.png",
-          "description": "Cookies and cream cake batter cookies are a delectable treat. They combine the flavors of cookies and cream in a soft, chewy cookie. Crushed chocolate sandwich cookies are mixed into the cookie dough for added texture and taste. These cookies are perfect for indulging in a sweet and creamy delight."
+          "cookieImage": "/IMG-0032.JPG",
+          "description": "Packed with Oreo crumbles and white chocolate chips."
+        },
+        {
+          "cardTitle": "Gimmie S'more",
+          "description": "America’s favorite campfire treat in cookie form. Each cookie is packed with Hershey’s chocolate chips, semi-sweet chocolate chips, graham crackers and topped with a gooey marshmallow."
+        },
+        {
+          "cardTitle": "Funfetti",
+          "cookieImage": "/Funfetti.jpg",
+          "description": "A party in your mouth and an all-time favorite for birthday celebrations. Each cookie is packed with white chocolate chips and rainbow sprinkles."
+        },
+        {
+          "cardTitle": "Cream Cheese Stuffed Red Velvet - TBD",
+          "cookieImage": "/cheesecake.png"
+        },
+        {
+          "cardTitle": "Pumpkin - TBD"
+        },
+        {
+          "cardTitle": "What's Up Doc",
+          "cookieImage": "/carrott.jpg",
+          "description": "Carrot cake in cookie form that literally melts in your mouth. Each cookie is topped with cream cheese frosting, freshly grated carrots, and walnuts."
+        },
+        {
+          "cardTitle": "Take 5!",
+          "description": "Take a 5-minute break to enjoy this cookie. Inspired by the Take 5 candy bar, each cookie is packed with peanuts, pretzels, and chocolate chips. It’s topped with gooey caramel, melted chocolate and a pretzel."
         }
       ],
       "_template": "cookieCardSection"
