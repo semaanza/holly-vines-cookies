@@ -6,11 +6,11 @@
     },
     "navItems": [
       {
-        "href": "about",
+        "href": "/about",
         "linkName": "About"
       },
       {
-        "href": "contact",
+        "href": "/contact",
         "linkName": "Contact "
       }
     ]

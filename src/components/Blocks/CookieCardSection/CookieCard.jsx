@@ -5,34 +5,65 @@ import {
   Box,
   Typography,
 } from "@mui/material";
-import React from "react";
+import { useState } from "react";
+import CookieModal from "./CookieModal";
 
-export default function CookieCard({ cardTitle, cookieImage, description }) {
+export default function CookieCard({
+  cardTitle,
+  cookieImage,
+  description,
+  ingrediants,
+}) {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   return (
     <Card
+      elevation={0}
       sx={{
-        height: "80vh",
+        height: "auto",
         width: "300px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-evenly",
+        textAlign: "center",
+        margin: "20px",
+        border: "none",
+        backgroundColor: "inherit",
       }}
     >
-      <CardActionArea>
-        <Box>
-          <Typography variant="h4" sx={{ height: "10vh" }}>
-            {cardTitle}
-          </Typography>
-          <CardMedia
-            image={cookieImage}
+      <CookieModal
+        title={cardTitle}
+        description={description}
+        open={open}
+        img={cookieImage}
+        close={handleClose}
+        indgrediants={ingrediants}
+      />
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "space-evenly",
+          alignItems: "center",
+          flexDirection: "column",
+          height: "100%",
+        }}
+      >
+        <Typography sx={{ height: "30%", paddingBottom: "20px" }} variant="h5">
+          {cardTitle}
+        </Typography>
+        <CardActionArea sx={{ borderRadius: "100px" }} onClick={handleOpen}>
+          <Box
+            sx={{
+              height: "250px",
+              width: "300px",
+              objectFit: "cover",
+              borderRadius: "200px",
+            }}
+            component="img"
+            src={cookieImage}
             title={cardTitle}
-            sx={{ height: "40vh" }}
           />
-          <Typography variant="body1" sx={{ height: "30vh" }}>
-            {description}
-          </Typography>
-        </Box>
-      </CardActionArea>
+        </CardActionArea>
+      </Box>
     </Card>
   );
 }
