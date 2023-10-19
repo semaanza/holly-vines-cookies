@@ -1,6 +1,13 @@
 import { Box, Modal, Typography } from "@mui/material";
 
-export default function CookieModal({ description, title, img, open, close }) {
+export default function CookieModal({
+  description,
+  title,
+  img,
+  open,
+  close,
+  indgrediants,
+}) {
   const style = {
     position: "absolute",
     top: "50%",
@@ -77,10 +84,7 @@ export default function CookieModal({ description, title, img, open, close }) {
               <Typography varaint="body1">{description}</Typography>
               <Box>
                 <Typography variant="h6">Ingrediants</Typography>
-                <Typography varaint="body2">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptatibus totam reiciendis cum ad accusantium commodi sed.
-                </Typography>
+                <Typography varaint="body2">{indgrediants}</Typography>
               </Box>
             </Box>
           </Box>

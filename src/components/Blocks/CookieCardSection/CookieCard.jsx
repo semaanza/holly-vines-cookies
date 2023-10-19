@@ -8,7 +8,12 @@ import {
 import { useState } from "react";
 import CookieModal from "./CookieModal";
 
-export default function CookieCard({ cardTitle, cookieImage, description }) {
+export default function CookieCard({
+  cardTitle,
+  cookieImage,
+  description,
+  ingrediants,
+}) {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -31,6 +36,7 @@ export default function CookieCard({ cardTitle, cookieImage, description }) {
         open={open}
         img={cookieImage}
         close={handleClose}
+        indgrediants={ingrediants}
       />
       <Box
         sx={{
