@@ -15,6 +15,7 @@ export default function HeroBanner({ data }) {
         backgroundImage: `url(${data?.heroImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
+        marginBottom: "40px",
       }}
     >
       <Card

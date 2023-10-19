@@ -7,7 +7,17 @@ export default function CookieCardSection(props) {
     data: { cookieCards },
   } = props;
   return (
-    <Box sx={{ width: "100vw", height: "100vh" }}>
+    <Box
+      sx={{
+        width: "100vw",
+        height: "auto",
+        display: "flex",
+        justifyContent: "space-evenly",
+        alignItems: "center",
+        flexWrap: "wrap",
+        backgroundColor: "#B2AC88",
+      }}
+    >
       {cookieCards?.map((card, i) => (
         <CookieCard key={i} {...card} />
       ))}

@@ -26,6 +26,11 @@ export const CookieCardSectionSchema = {
           label: "Description",
           name: "description",
         },
+        {
+          type: "string",
+          label: "Ingrediants",
+          name: "ingrediants",
+        },
       ],
     },
   ],
