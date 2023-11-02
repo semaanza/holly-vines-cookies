@@ -1,6 +1,5 @@
 "use client";
 import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material";
-import React from "react";
 
 export default function HeroBanner({ data }) {
   return (
