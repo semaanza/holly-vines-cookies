@@ -63,6 +63,15 @@
         }
       ],
       "_template": "cookieCardSection"
+    },
+    {
+      "contactForm": [
+        {
+          "formTitle": "Place Your Orders",
+          "description": "Please specify the amount of cookies you would like and what kinds. We will respond with a confirmation shortly afterwards."
+        }
+      ],
+      "_template": "contactFormSection"
     }
   ]
 }

@@ -1,5 +1,6 @@
 import CookieCardSection from "./Blocks/CookieCardSection/CookieCardSection";
 import HeroBanner from "./Blocks/HeroBanner/HeroBanner";
+import ContactForm from "./Blocks/Contact/ContactForm";
 import { tinaField } from "tinacms/dist/react";
 
 export const Blocks = (props) => {
@@ -24,6 +25,8 @@ const Block = (block) => {
       return <HeroBanner data={block} />;
     case "PageBlockCookieCardSection":
       return <CookieCardSection data={block} />;
+    case "PageBlockContactForm":
+      return <ContactForm data={block} />;
     default:
       return <span>couldn't get</span>;
   }
