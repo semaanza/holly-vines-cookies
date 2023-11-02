@@ -1,6 +1,8 @@
 import { Box, Button, TextField, Typography } from "@mui/material";
 
-export default function ContactForm() {
+export default function ContactForm(props) {
+  console.log("PROPS>>>>", props);
+
   const onSubmit = () => {
     console.log("submitted");
   };
