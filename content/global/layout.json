@@ -6,12 +6,20 @@
     },
     "navItems": [
       {
+        "href": "/blog",
+        "linkName": "Blog"
+      },
+      {
+        "href": "/shop",
+        "linkName": "Shop"
+      },
+      {
         "href": "/about",
-        "linkName": "About"
+        "linkName": "Our Story"
       },
       {
         "href": "/contact",
-        "linkName": "Contact "
+        "linkName": "Contact Us"
       }
     ]
   }

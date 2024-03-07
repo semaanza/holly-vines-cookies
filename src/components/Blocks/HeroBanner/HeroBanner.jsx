@@ -1,43 +1,48 @@
-"use client";
-import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 
-export default function HeroBanner({ data }) {
+export default function ({ data }) {
   return (
     <Box
       sx={{
         display: "flex",
         alignItems: "center",
-        justifyContent: "flex-end",
+        justifyContent: { xs: "center", sm: "flex-start" },
         backgroundColor: "lightgray",
-        width: "100vw",
-        height: "100vh",
-        backgroundImage: `url(${data?.heroImage})`,
+        width: "100%",
+        height: "100%",
+        // backgroundImage: `url(${data?.heroImage})`,
+        backgroundImage: "url('https://picsum.photos/2')",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        marginBottom: "40px",
       }}
     >
-      <Card
+      <Box
         sx={{
           display: "flex",
-          alignItems: "center",
-          justifyContent: "space-evenly",
+
           flexDirection: "column",
-          width: "300px",
+          width: { xs: "auto", sm: 400 },
           height: "auto",
-          mr: "60px",
+          pl: { xs: "30px", sm: "60px" },
+          // opacity: "0.5",
           position: "absolute",
+          //backgroundColor: "inherit",
         }}
       >
-        <CardMedia
-          image={data?.sideLogoImage}
-          sx={{ height: "300px", width: "100%", objectFit: "cover" }}
-        />
-
-        <CardContent sx={{ height: "" }}>
-          {data?.description && <Typography>{data?.description}</Typography>}
-        </CardContent>
-      </Card>
+        <Typography variant="h3" sx={{ textAlign: "left", mb: "20px" }}>
+          Delicious Homemade Cookies{" "}
+        </Typography>
+        <Typography variant="h6" sx={{ textAlign: "left", mb: "40px" }}>
+          Freshly baked treats to your door{" "}
+        </Typography>
+        <Button
+          variant="contained"
+          href="/contact"
+          sx={{ width: { xs: "40%" } }}
+        >
+          Order Now
+        </Button>
+      </Box>
     </Box>
   );
 }

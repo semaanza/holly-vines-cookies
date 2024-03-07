@@ -1,4 +1,18 @@
 module.exports = {
+  images: {
+    remotePatterns: [
+      {
+        port: "",
+        protocol: "https",
+        hostname: "avatars.githubusercontent.com",
+      },
+      {
+        port: "3000",
+        protocol: "http",
+        hostname: "localhost",
+      },
+    ],
+  },
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/i,

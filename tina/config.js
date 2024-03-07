@@ -1,6 +1,6 @@
 import { ContactFormSchema } from "../src/components/Blocks/Contact/ContactFormSchema";
 import { CookieCardSectionSchema } from "../src/components/Blocks/CookieCardSection/CookieCardSectionSchema";
-import { HeroBannerSchema } from "../src/components/Blocks/HeroBanner/HeroBannerSchema";
+import { HeroBannerSchema } from "../src/components/Blocks/HeroBanner/index";
 import { GlobalSchema } from "../src/components/Layout/GlobalSchema";
 
 import { defineConfig } from "tinacms";
