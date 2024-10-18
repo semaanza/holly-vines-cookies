@@ -1,1 +1,1 @@
-export { default as LatestCookieSection } from "./LatestCookieSection";
+export * from "./LatestCookieSection";

@@ -1,5 +1,5 @@
 "use client";
-import HeroBanner from "@/components/Blocks/HeroBanner";
+import { HeroBanner } from "@/components";
 import React from "react";
 import { useTina } from "tinacms/dist/react";
 import { client } from "../../tina/__generated__/client";

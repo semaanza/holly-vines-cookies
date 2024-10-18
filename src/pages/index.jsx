@@ -1,9 +1,11 @@
 "use client";
 import { Box, Typography } from "@mui/material";
-import { HeroBanner } from "../components/Blocks/HeroBanner";
-import { LatestCookieSection } from "../components/Blocks/LatestCookies/LatestCookieSection";
-import { Promise } from "../components/Blocks/Promise";
-import { HowWeWork } from "../components/Blocks/HowWeWork";
+import {
+  HeroBanner,
+  Promise,
+  LatestCookieSection,
+  HowWeWork,
+} from "../components";
 
 export default function Home() {
   return (
