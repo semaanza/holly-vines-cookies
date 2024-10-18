@@ -1,8 +1,9 @@
 "use client";
-import { Box } from "@mui/material";
-import { HeroBanner } from "@/components/Blocks/HeroBanner";
-import { LatestCookieSection } from "@/components/Blocks/LatestCookies";
-import chocolateChip from "/public/chocolate.png";
+import { Box, Typography } from "@mui/material";
+import { HeroBanner } from "../components/Blocks/HeroBanner";
+import { LatestCookieSection } from "../components/Blocks/LatestCookies/LatestCookieSection";
+import { Promise } from "../components/Blocks/Promise";
+import { HowWeWork } from "../components/Blocks/HowWeWork";
 
 export default function Home() {
   return (
@@ -14,8 +15,10 @@ export default function Home() {
           flexDirection: "column",
           alignItems: "center",
           flexWrap: "wrap",
+          mb: "100px",
         }}
       >
+        {/* will be able to be maped through when CMS is setup */}
         <LatestCookieSection
           title="Chocolate Chip"
           description="lCulpa ullamco veniam nulla aute anim tempor do dolor tempor laborum. Elit enim non in adipisicing officia esse aliquip cillum laborum deserunt non."
@@ -35,6 +38,8 @@ export default function Home() {
           reverse={false}
         />
       </Box>
+      <HowWeWork />
+      <Promise />
     </>
   );
 }

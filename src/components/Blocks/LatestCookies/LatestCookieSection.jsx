@@ -2,18 +2,24 @@ import { Box, Typography, Button } from "@mui/material";
 //import Image from "next/image";
 import React from "react";
 
-export default function ({ imgSource, title, description, reverse }) {
+export const LatestCookieSection = ({
+  imgSource,
+  title,
+  description,
+  reverse,
+}) => {
   const flexDirection = reverse ? "row-reverse" : "row";
   return (
     <Box
       sx={{
         height: { xs: "auto" },
-        width: "100%",
+        width: { xs: "100%", sm: "80%" },
         display: "flex",
         alignItems: "center",
         flexDirection: flexDirection,
         padding: "30px",
         flexWrap: "wrap",
+        mb: { xs: "20px", sm: "10px" },
       }}
     >
       <Box
@@ -53,4 +59,4 @@ export default function ({ imgSource, title, description, reverse }) {
       </Box>
     </Box>
   );
-}
+};

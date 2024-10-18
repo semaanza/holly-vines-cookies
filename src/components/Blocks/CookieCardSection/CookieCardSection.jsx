@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 import React from "react";
 import CookieCard from "./CookieCard";
 
-export default function CookieCardSection(props) {
+export const CookieCardSection = (props) => {
   const {
     data: { cookieCards },
   } = props;
@@ -23,4 +23,4 @@ export default function CookieCardSection(props) {
       ))}
     </Box>
   );
-}
+};

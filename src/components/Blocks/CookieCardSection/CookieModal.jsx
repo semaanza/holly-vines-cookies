@@ -1,13 +1,13 @@
 import { Box, Modal, Typography } from "@mui/material";
 
-export default function CookieModal({
+export const CookieModal = ({
   description,
   title,
   img,
   open,
   close,
   indgrediants,
-}) {
+}) => {
   const style = {
     position: "absolute",
     top: "50%",
@@ -92,4 +92,4 @@ export default function CookieModal({
       </Box>
     </Modal>
   );
-}
+};

@@ -1,6 +1,6 @@
 import { Box, Button, Typography } from "@mui/material";
 
-export default function ({ data }) {
+export const HeroBanner = ({ data }) => {
   return (
     <Box
       sx={{
@@ -45,4 +45,4 @@ export default function ({ data }) {
       </Box>
     </Box>
   );
-}
+};

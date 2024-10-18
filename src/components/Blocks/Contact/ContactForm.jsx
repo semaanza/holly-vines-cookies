@@ -1,6 +1,6 @@
 import { Box, Button, TextField, Typography } from "@mui/material";
 
-export default function ContactForm(props) {
+export const ContactForm = (props) => {
   console.log("PROPS>>>>", props);
 
   const onSubmit = () => {
@@ -70,4 +70,4 @@ export default function ContactForm(props) {
       </form>
     </Box>
   );
-}
+};
