@@ -6,6 +6,8 @@ import {
   LatestCookieSection,
   HowWeWork,
 } from "../components";
+import { ReviewsSection } from "@/components/Blocks/ReviewsSection";
+import { LetsTalkSection } from "@/components/Blocks/LetsTalkSection";
 
 export default function Home() {
   return (
@@ -42,6 +44,8 @@ export default function Home() {
       </Box>
       <HowWeWork />
       <Promise />
+      <ReviewsSection />
+      <LetsTalkSection />
     </>
   );
 }

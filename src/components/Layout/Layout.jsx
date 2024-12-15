@@ -1,5 +1,5 @@
-import Header from "./Header/Header";
-import Footer from "./Footer/Footer";
+import { Header } from "./Header";
+import { Footer } from "./Footer";
 import layoutData from "../../../content/global/layout.json";
 
 export const Layout = ({ children }) => {

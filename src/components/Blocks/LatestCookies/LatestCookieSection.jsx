@@ -29,7 +29,7 @@ export const LatestCookieSection = ({
           justifyContent: "center",
           width: { xs: "100%", sm: "50%" },
           padding: "20px",
-          height: "auto%",
+          height: "auto",
         }}
       >
         <Box

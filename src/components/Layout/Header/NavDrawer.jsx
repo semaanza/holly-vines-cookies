@@ -1,5 +1,3 @@
-import HeaderStyles from "./header.module.css";
-
 import {
   Box,
   Typography,
@@ -11,12 +9,12 @@ import {
   Drawer,
 } from "@mui/material";
 
-export default function NavDrawer({
+export const NavDrawer = ({
   navItems,
   handleDrawerToggle,
   logo,
   mobileOpen,
-}) {
+}) => {
   const drawerWidth = 240;
 
   return (
@@ -71,4 +69,4 @@ export default function NavDrawer({
       </Drawer>
     </Box>
   );
-}
+};

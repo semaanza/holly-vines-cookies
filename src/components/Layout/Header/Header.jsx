@@ -1,10 +1,10 @@
-import HeaderStyles from "./header.module.css";
+// import HeaderStyles from "./header.module.css";
 import { AppBar, Box, IconButton, Toolbar, Button } from "@mui/material";
-import NavDrawer from "./NavDrawer";
+import { NavDrawer } from "./NavDrawer";
 import { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 
-export default function Header({ data }) {
+export const Header = ({ data }) => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const toggleDrawer = () => {
     setMobileOpen((prevState) => !prevState);
@@ -83,4 +83,4 @@ export default function Header({ data }) {
       </Box>
     </Box>
   );
-}
+};
