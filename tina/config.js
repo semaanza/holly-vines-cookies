@@ -1,8 +1,8 @@
 import {
   ShopCookieCardSectionSchema,
-  // HeroBannerSchema,
-  // CookieCardSectionSchema,
-  // ContactFormSchema,
+  HeroBannerSchema,
+  CookieCardSectionSchema,
+  ContactFormSchema,
   GlobalSchema,
 } from "../src";
 
@@ -65,7 +65,12 @@ export default defineConfig({
             name: "block",
             label: "Block",
             list: true,
-            templates: [ShopCookieCardSectionSchema],
+            templates: [
+              ShopCookieCardSectionSchema,
+              HeroBannerSchema,
+              CookieCardSectionSchema,
+              ContactFormSchema,
+            ],
           },
         ],
       },
