@@ -6,7 +6,7 @@ import {
   Typography,
 } from "@mui/material";
 import { useState } from "react";
-import CookieModal from "./CookieModal";
+import { CookieModal } from "./CookieModal";
 
 export const CookieCard = ({
   cardTitle,

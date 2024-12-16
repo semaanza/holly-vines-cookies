@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import React from "react";
-import CookieCard from "./CookieCard";
+import { CookieCard } from "./CookieCard";
 
 export const CookieCardSection = (props) => {
   const {

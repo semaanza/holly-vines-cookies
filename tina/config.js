@@ -1,7 +1,10 @@
-import { ContactFormSchema } from "../src/components/Blocks/Contact/ContactFormSchema";
-import { CookieCardSectionSchema } from "../src/components/Blocks/CookieCardSection/CookieCardSectionSchema";
-import { HeroBannerSchema } from "../src/components/Blocks/HeroBanner/index";
-import { GlobalSchema } from "../src/components/Layout/GlobalSchema";
+import {
+  ShopCookieCardSectionSchema,
+  // HeroBannerSchema,
+  // CookieCardSectionSchema,
+  // ContactFormSchema,
+  GlobalSchema,
+} from "../src";
 
 import { defineConfig } from "tinacms";
 
@@ -62,12 +65,7 @@ export default defineConfig({
             name: "block",
             label: "Block",
             list: true,
-            templates: [
-              HeroBannerSchema,
-              CookieCardSectionSchema,
-              ContactFormSchema,
-              //
-            ],
+            templates: [ShopCookieCardSectionSchema],
           },
         ],
       },
