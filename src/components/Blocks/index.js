@@ -6,3 +6,4 @@ export * from "./LetsTalkSection";
 export * from "./ShopCookieCard";
 export * from "./Contact";
 export * from "./CookieCardSection";
+export * from "./ReviewsSection";

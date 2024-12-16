@@ -1,8 +1,5 @@
 import React from "react";
 import { Box } from "@mui/material";
-import { useTina } from "tinacms/dist/react";
-import { TinaMarkdown } from "tinacms/dist/rich-text";
-import client from "../../tina/__generated__/client";
 import { ShopCookieCardSection } from "../components";
 
 export default function Shop(props) {

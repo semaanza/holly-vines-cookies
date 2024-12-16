@@ -5,9 +5,9 @@ import {
   Promise,
   LatestCookieSection,
   HowWeWork,
+  LetsTalkSection,
+  ReviewsSection,
 } from "../components";
-import { ReviewsSection } from "@/components/Blocks/ReviewsSection";
-import { LetsTalkSection } from "@/components/Blocks/LetsTalkSection";
 
 export default function Home() {
   return (
