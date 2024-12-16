@@ -1,5 +1,5 @@
-export { Box, Typography, Divider } from "@mui/material";
-export { ShopCookieCard } from "./ShopCookieCard";
+import { Box, Typography, Divider } from "@mui/material";
+import { ShopCookieCard } from "./ShopCookieCard";
 
 export const ShopCookieCardSection = () => {
   return (
