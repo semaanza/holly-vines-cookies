@@ -2,6 +2,8 @@ export const ShopCookieCardSchema = {
   name: "shopCookieCard",
   label: "Shop Cookie Card",
   type: "object",
+  list: true,
+  ui: { itemProps: ({ cookieTitle: label }) => ({ label }) },
   fields: [
     {
       type: "string",
