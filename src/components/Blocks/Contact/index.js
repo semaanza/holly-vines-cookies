@@ -1,2 +1,2 @@
 export * from "./ContactForm";
-export * from "./contactFormSchema";
+export * from "./schema";

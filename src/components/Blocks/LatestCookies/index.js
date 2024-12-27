@@ -1,2 +1,2 @@
 export * from "./LatestCookieSection";
-export * from "./latestCookiesSchema";
+export * from "./schema";

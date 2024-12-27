@@ -1,2 +1,2 @@
 export * from "./HeroBanner";
-export * from "./heroBannerSchema";
+export * from "./schema";
