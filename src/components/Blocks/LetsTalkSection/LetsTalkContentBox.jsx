@@ -1,6 +1,6 @@
 import { Box, Typography, Button } from "@mui/material";
 
-export const LetsTalkContentBox = () => {
+export const LetsTalkContentBox = ({ title, description }) => {
   return (
     <Box
       sx={{
@@ -20,7 +20,7 @@ export const LetsTalkContentBox = () => {
           pb: { xs: 2, sm: 2 },
         }}
       >
-        Let's Talk
+        {title}
       </Typography>
       <Typography
         variant="body1"
@@ -28,8 +28,7 @@ export const LetsTalkContentBox = () => {
           pb: { xs: 2, sm: 2 },
         }}
       >
-        We're eager to hear about your cookie preferences, goals, needs and
-        cravings. Let's arrange a discussion.
+        {description}
       </Typography>
       <Button
         size="small"

@@ -1,2 +1,2 @@
 export * from "./CookieCardSection";
-export * from "./CookieCardSectionSchema";
+export * from "./cookieCardSectionSchema";

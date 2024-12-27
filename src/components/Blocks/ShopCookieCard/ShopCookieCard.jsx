@@ -24,8 +24,7 @@ export const ShopCookieCard = ({ cookieTitle, cookieImage, ingredients }) => {
           component="img"
           src={cookieImage}
           sx={{
-            objectFit: "cover",
-            objectPosition: "center",
+            objectFit: "fill",
             width: { xs: "100%", sm: "100%" },
             height: "100%",
             borderTopLeftRadius: "10px",

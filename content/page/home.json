@@ -2,6 +2,17 @@
   "header": "home",
   "block": [
     {
+      "cookies": [
+        {
+          "title": "test",
+          "description": "tst",
+          "imgSource": "dasda",
+          "reverse": true
+        }
+      ],
+      "_template": "latestCookies"
+    },
+    {
       "description": "Holly Vines Cookie Co",
       "heroImage": "/combo.png",
       "sideLogoImage": "/logo.png",

@@ -1,7 +1,11 @@
 import { Box, Typography } from "@mui/material";
 import { LetsTalkContentBox } from "./LetsTalkContentBox";
 
-export const LetsTalkSection = () => {
+export const LetsTalkSection = ({
+  subTitle = "Make Your Order Our Next Obsession",
+  title = "Lets Talk",
+  description = "We're eager to hear about your cookie preferences, goals, needs and cravings. Let's arrange a discussion.",
+}) => {
   return (
     <Box
       sx={{
@@ -26,7 +30,7 @@ export const LetsTalkSection = () => {
           textAlign: "center",
         }}
       >
-        <Typography variant="h4">Make Your Order Our Next Obsession</Typography>
+        <Typography variant="h4">{subTitle}</Typography>
       </Box>
       <Box
         sx={{
@@ -37,7 +41,7 @@ export const LetsTalkSection = () => {
           alignItems: "center",
         }}
       >
-        <LetsTalkContentBox />
+        <LetsTalkContentBox title={title} description={description} />
       </Box>
     </Box>
   );

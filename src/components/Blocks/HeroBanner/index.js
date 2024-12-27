@@ -1,2 +1,2 @@
 export * from "./HeroBanner";
-export { HeroBannerSchema } from "./HeroBannerSchema";
+export * from "./heroBannerSchema";
