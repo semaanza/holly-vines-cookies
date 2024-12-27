@@ -1,7 +1,8 @@
 import { Box, Typography, Divider } from "@mui/material";
 import { ShopCookieCard } from "./ShopCookieCard";
 
-export const ShopCookieCardSection = () => {
+export const ShopCookieCardSection = (data) => {
+  const cookies = data.block[0].shopCookieCard.shopCookieCard;
   return (
     <>
       <Box
@@ -34,11 +35,14 @@ export const ShopCookieCardSection = () => {
         }}
       >
         {/*map through cards here */}
-        <ShopCookieCard />
-        <ShopCookieCard />
-        <ShopCookieCard />
-        <ShopCookieCard />
-        <ShopCookieCard />
+        {cookies.map((cookie) => (
+          <ShopCookieCard
+            key={cookie.id + cookie.cookieTitle}
+            cookieTitle={cookie.cookieTitle}
+            cookieImage={cookie.cookieImage}
+            ingredients={cookie.ingredients}
+          />
+        ))}
         <ShopCookieCard />
       </Box>
     </>

@@ -1,16 +1,10 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { Box } from "@mui/material";
 import { ShopCookieCardSection } from "../components";
+import shopData from "../../content/page/shop.json";
 
-export default function Shop(props) {
-  // const { data } = useTina({
-  //   query: props.query,
-  //   variables: props.variables,
-  //   data: props.data,
-  // });
-  // console.log(data);
-
+export default function Shop() {
   return (
     <>
       <Box
@@ -25,7 +19,7 @@ export default function Shop(props) {
           padding: "30px",
         }}
       >
-        <ShopCookieCardSection />
+        <ShopCookieCardSection {...shopData} />
       </Box>
     </>
   );

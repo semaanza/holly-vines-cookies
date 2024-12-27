@@ -1,7 +1,7 @@
 import { Typography, Box, Button, IconButton } from "@mui/material";
 import { ArrowUpward } from "@mui/icons-material";
 
-export const ShopCookieCard = () => {
+export const ShopCookieCard = ({ cookieTitle, cookieImage, ingredients }) => {
   return (
     <Box
       sx={{
@@ -10,17 +10,22 @@ export const ShopCookieCard = () => {
         width: { xs: "100%", sm: "50%", md: "30%" },
         height: "350px",
         margin: "10px",
+        position: "relative",
         ":hover": {
           boxShadow: "0 0 10px 0px black",
+          transform: { xs: "scale(1.0)", sm: "scale(1.15)" },
+          transition: "all 0.3s ease",
+          zIndex: 100,
         },
       }}
     >
       <Box sx={{ width: "100%", height: "70%" }}>
         <Box
           component="img"
-          src="https://picsum.photos/id/13/800/600"
+          src={cookieImage}
           sx={{
-            objectFit: "fill",
+            objectFit: "cover",
+            objectPosition: "center",
             width: { xs: "100%", sm: "100%" },
             height: "100%",
             borderTopLeftRadius: "10px",
@@ -36,9 +41,12 @@ export const ShopCookieCard = () => {
           alignItems: "center",
           padding: "10px",
           borderTop: "2px solid black",
+          backgroundColor: "secondary.main",
+          borderBottomLeftRadius: "10px",
+          borderBottomRightRadius: "10px",
         }}
       >
-        <Typography sx={{ width: "50%" }}>Cookie name</Typography>
+        <Typography sx={{ width: "50%" }}>{cookieTitle}</Typography>
         <Box
           sx={{
             width: "50%",
