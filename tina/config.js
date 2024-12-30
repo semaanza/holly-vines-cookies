@@ -1,12 +1,14 @@
 import {
   ShopCookieCardSectionSchema,
-  HeroBannerSchema,
   CookieCardSectionSchema,
   ContactFormSchema,
   GlobalSchema,
   LatestCookiesSchema,
   HowWeWorkSchema,
   LetsTalkSchema,
+  ReviewSchema,
+  HeroBannerSchema,
+  PromiseSchema,
 } from "../src";
 import { defineConfig } from "tinacms";
 
@@ -75,6 +77,8 @@ export default defineConfig({
               LatestCookiesSchema,
               HowWeWorkSchema,
               LetsTalkSchema,
+              ReviewSchema,
+              PromiseSchema,
             ],
           },
         ],

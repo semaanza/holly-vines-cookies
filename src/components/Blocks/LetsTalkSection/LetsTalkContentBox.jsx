@@ -6,12 +6,14 @@ export const LetsTalkContentBox = ({ title, description }) => {
       sx={{
         display: "flex",
         width: { xs: "100%" },
-        height: { xs: "auto", sm: "90%" },
+        height: { xs: "auto" },
         flexWrap: "wrap",
         flexDirection: "column",
         padding: "30px",
         backgroundColor: "#fcf8f7",
         borderRadius: "10px",
+        alignItems: "start",
+        justifyContent: "center",
       }}
     >
       <Typography

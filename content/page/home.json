@@ -2,87 +2,86 @@
   "header": "home",
   "block": [
     {
+      "description": "Freshly baked treats to your door",
+      "mainImage": "/combo.png",
+      "title": "Delicious Homemade Cookies",
+      "_template": "heroBanner"
+    },
+    {
       "cookies": [
         {
-          "title": "test",
-          "description": "tst",
-          "imgSource": "dasda",
+          "title": "Red Velvet",
+          "description": "Picture a vibrant crimson cookie with a velvety-smooth texture, where rich cocoa undertones meld with subtle vanilla and tangy cream cheese notes. The cookie's striking red hue draws you in, while white chocolate chips scattered throughout provide bursts of sweetness and a beautiful color contrast against the deep red dough. When broken apart, the interior reveals a tender, cake-like crumb that maintains just enough chewiness to remind you it's still a cookie at heart, while a delicate sweetness balanced with cocoa creates that distinctive red velvet flavor that's simultaneously familiar and unique.",
+          "imgSource": "/cheesecake.png",
+          "reverse": true
+        },
+        {
+          "title": "Peanut Butter Reeses",
+          "description": "Imagine biting into a warm, chewy cookie where rich peanut butter dough cradles a generous scattering of Reese's chips throughout – each morsel offering that perfect marriage of chocolate and peanut butter that Reese's is famous for. The cookie strikes an irresistible balance between sweet and salty, with a tender interior that's complemented by slightly crisp edges, while the peanut butter chips remain perfectly melted, creating pockets of creamy indulgence that make each bite better than the last.",
+          "imgSource": "/IMG-7918.jpg"
+        },
+        {
+          "title": "Chocolate Chip",
+          "description": "Picture a freshly baked chocolate chip cookie, golden-brown around the edges and slightly lighter in the center. The surface is delightfully uneven, marked with crackles and ridges that form tiny valleys filled with puddles of melted chocolate. Each bite begins with a gentle crunch that gives way to a tender, buttery interior – the perfect balance between crisp and chewy.",
+          "imgSource": "/chocolate.png",
           "reverse": true
         }
       ],
       "_template": "latestCookies"
     },
     {
-      "description": "Holly Vines Cookie Co",
-      "heroImage": "/combo.png",
-      "sideLogoImage": "/logo.png",
-      "_template": "heroBanner"
-    },
-    {
-      "cookieCards": [
+      "howWeWorkCards": [
         {
-          "cardTitle": "Chocolate Chip",
-          "cookieImage": "/0.jpg",
-          "description": "A true classic you can never go wrong with choosing. Each cookie is packed with a boatload of semi-sweet chocolate chips."
+          "title": "Choose Cookies",
+          "step": "1",
+          "image": "/combo.png",
+          "description": "Select from a variety of cookies"
         },
         {
-          "cardTitle": "M&M",
-          "description": "M&M – Each cookie is packed with an explosion of M&M candy pieces. Need we say more?"
+          "title": "Place Your Order",
+          "step": "2",
+          "image": "/antiques.png",
+          "description": "Email us with your order"
         },
         {
-          "cardTitle": "Snickerdoodle - TBD",
-          "cookieImage": "/unnamed.jpg"
-        },
-        {
-          "cardTitle": "Peanut Butter Chip - TBD",
-          "cookieImage": "/IMG-9817.JPG"
-        },
-        {
-          "cardTitle": "Ultimate Reese's",
-          "cookieImage": "/IMG-7918.jpg",
-          "description": "A peanut butter lover’s dream. Packed with Reese’s cups, Reese’s pieces, and semi-sweet chocolate chips. Each cookie is topped with melted peanut butter chips."
-        },
-        {
-          "cardTitle": "Cookies & Cream",
-          "cookieImage": "/IMG-0032.JPG",
-          "description": "Packed with Oreo crumbles and white chocolate chips."
-        },
-        {
-          "cardTitle": "Gimmie S'more",
-          "description": "America’s favorite campfire treat in cookie form. Each cookie is packed with Hershey’s chocolate chips, semi-sweet chocolate chips, graham crackers and topped with a gooey marshmallow."
-        },
-        {
-          "cardTitle": "Funfetti",
-          "cookieImage": "/Funfetti.jpg",
-          "description": "A party in your mouth and an all-time favorite for birthday celebrations. Each cookie is packed with white chocolate chips and rainbow sprinkles."
-        },
-        {
-          "cardTitle": "Cream Cheese Stuffed Red Velvet - TBD",
-          "cookieImage": "/cheesecake.png"
-        },
-        {
-          "cardTitle": "Pumpkin - TBD"
-        },
-        {
-          "cardTitle": "What's Up Doc",
-          "cookieImage": "/carrott.jpg",
-          "description": "Carrot cake in cookie form that literally melts in your mouth. Each cookie is topped with cream cheese frosting, freshly grated carrots, and walnuts."
-        },
-        {
-          "cardTitle": "Take 5!",
-          "description": "Take a 5-minute break to enjoy this cookie. Inspired by the Take 5 candy bar, each cookie is packed with peanuts, pretzels, and chocolate chips. It’s topped with gooey caramel, melted chocolate and a pretzel."
+          "title": "Receive and Enjoy",
+          "step": "3",
+          "image": "/take5.jpg",
+          "description": "Freshly baked for you to enjoy"
         }
       ],
-      "_template": "cookieCardSection"
+      "_template": "howWeWork"
     },
     {
-      "contactForm": [
+      "title": "Our Promise",
+      "description": "We commit to delivering fresh, homemade cookies made with love and the finest ingredients.",
+      "mainImage": "/bread1.png",
+      "secondaryImage": "/becca.png",
+      "cta": "Check out our story",
+      "_template": "promise"
+    },
+    {
+      "reviewCards": [
         {
-          "formTitle": "Place Your Orders",
-          "description": "Please specify the amount of cookies you would like and what kinds. We will respond with a confirmation shortly afterwards."
+          "name": "Bailey",
+          "review": "This chocolate chip cookie delivers buttery, golden-brown perfection with a satisfyingly chewy center. The generous chocolate chunks create rich pockets of sweetness, while hints of vanilla and brown sugar round out the classic homestyle flavor."
+        },
+        {
+          "name": "Lacey",
+          "review": "A perfectly balanced cookie with crispy edges, a chewy center, and generous chocolate chunks throughout."
+        },
+        {
+          "name": "Josie",
+          "review": "This chocolate chip cookie strikes the perfect balance between chewy and crisp, with a rich buttery dough studded with melty chocolate chunks. The edges have just the right amount of golden-brown crispiness while the center remains wonderfully soft and tender."
         }
       ],
-      "_template": "contactFormSection"
+      "_template": "reviews"
+    },
+    {
+      "title": "Let's Talk",
+      "subTitle": "Make your order our next obsession",
+      "description": "We're eager to hear about your cookie preferences, goals, needs and cravings. Let's arrange a discussion.",
+      "_template": "letsTalkSection"
     }
   ]
 }

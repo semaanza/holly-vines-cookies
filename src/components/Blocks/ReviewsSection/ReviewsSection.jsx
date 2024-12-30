@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import { ReviewCard } from "./ReviewCard";
 
-export const ReviewsSection = () => {
+export const ReviewsSection = ({ cards }) => {
   return (
     <Box
       sx={{
@@ -36,9 +36,9 @@ export const ReviewsSection = () => {
           justifyContent: "space-evenly",
         }}
       >
-        <ReviewCard />
-        <ReviewCard />
-        <ReviewCard />
+        {cards.map((card, i) => (
+          <ReviewCard key={i + card.review} {...card} />
+        ))}
       </Box>
     </Box>
   );

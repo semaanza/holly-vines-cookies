@@ -23,8 +23,8 @@ export const ShopCookieCardSchema = {
         },
         {
           type: "string",
-          label: "Ingrediants",
-          name: "ingrediants",
+          label: "Ingredients",
+          name: "ingredients",
         },
       ],
     },

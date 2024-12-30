@@ -8,11 +8,19 @@ import {
   LetsTalkSection,
   ReviewsSection,
 } from "../components";
+import homeData from "../../content/page/home.json";
 
 export default function Home() {
+  const heroData = homeData.block[0];
+  const latestCookiesData = homeData.block[1];
+  const howWeWorkData = homeData.block[2];
+  const promiseData = homeData.block[3];
+  const reviewsData = homeData.block[4];
+  const letsTalkData = homeData.block[5];
+
   return (
     <>
-      <HeroBanner />
+      <HeroBanner {...heroData} />
       <Box
         sx={{
           display: "flex",
@@ -22,30 +30,14 @@ export default function Home() {
           mb: "100px",
         }}
       >
-        {/* will be able to be maped through when CMS is setup */}
-        <LatestCookieSection
-          title="Chocolate Chip"
-          description="lCulpa ullamco veniam nulla aute anim tempor do dolor tempor laborum. Elit enim non in adipisicing officia esse aliquip cillum laborum deserunt non."
-          imgSource="https://picsum.photos/id/10/800/600"
-          reverse={false}
-        />
-        <LatestCookieSection
-          title="Peanut Butter"
-          description="lCulpa ullamco veniam nulla aute anim tempor do dolor tempor laborum. Elit enim non in adipisicing officia esse aliquip cillum laborum deserunt non."
-          imgSource="https://picsum.photos/id/1/800/600"
-          reverse={true}
-        />
-        <LatestCookieSection
-          title="M & M"
-          description="lCulpa ullamco veniam nulla aute anim tempor do dolor tempor laborum. Elit enim non in adipisicing officia esse aliquip cillum laborum deserunt non."
-          imgSource="https://picsum.photos/id/13/800/600"
-          reverse={false}
-        />
+        {latestCookiesData.cookies.map((cookie, i) => (
+          <LatestCookieSection key={i + cookie.title} {...cookie} />
+        ))}
       </Box>
-      <HowWeWork />
-      <Promise />
-      <ReviewsSection />
-      <LetsTalkSection />
+      <HowWeWork cards={howWeWorkData.howWeWorkCards} />
+      <Promise {...promiseData} />
+      <ReviewsSection cards={reviewsData.reviewCards} />
+      <LetsTalkSection {...letsTalkData} />
     </>
   );
 }

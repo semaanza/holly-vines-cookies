@@ -21,7 +21,7 @@ export const LatestCookiesSchema = {
           name: "description",
         },
         {
-          type: "string",
+          type: "image",
           label: "Image Source",
           name: "imgSource",
         },

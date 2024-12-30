@@ -9,7 +9,7 @@ export const HeroBannerSchema = {
       name: "description",
     },
     {
-      type: "string",
+      type: "image",
       label: "Main Image",
       name: "mainImage",
     },

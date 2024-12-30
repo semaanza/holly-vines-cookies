@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Typography } from "@mui/material";
 import { HowWeWorkCard } from "./HowWeWorkCard";
 
-export const HowWeWork = () => {
+export const HowWeWork = ({ cards }) => {
   return (
     <Box
       sx={{
@@ -33,24 +33,15 @@ export const HowWeWork = () => {
           justifyContent: "space-evenly",
         }}
       >
-        <HowWeWorkCard
-          title="Choose Cookies"
-          step="Step 1"
-          image="https://picsum.photos/id/13/800/600"
-          description="lCulpa ullamco veniam nulla"
-        />
-        <HowWeWorkCard
-          title="Choose Cookies"
-          step="Step 1"
-          image="https://picsum.photos/id/13/800/600"
-          description="lCulpa ullamco veniam nulla"
-        />{" "}
-        <HowWeWorkCard
-          title="Choose Cookies"
-          step="Step 1"
-          image="https://picsum.photos/id/13/800/600"
-          description="lCulpa ullamco veniam nulla"
-        />
+        {cards.map((card, i) => (
+          <HowWeWorkCard
+            key={i + card.title}
+            title={card.title}
+            step={card.step}
+            image={card.image}
+            description={card.description}
+          />
+        ))}
       </Box>
     </Box>
   );

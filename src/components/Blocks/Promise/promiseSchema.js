@@ -16,12 +16,12 @@ export const PromiseSchema = {
     {
       name: "mainImage",
       label: "Main Image",
-      type: "string",
+      type: "image",
     },
     {
       name: "secondaryImage",
       label: "Secondary Image",
-      type: "string",
+      type: "image",
     },
     {
       name: "cta",

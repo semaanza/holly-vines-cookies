@@ -1,5 +1,4 @@
 import { Box, Typography, Button } from "@mui/material";
-//import Image from "next/image";
 import React from "react";
 
 export const LatestCookieSection = ({
@@ -12,14 +11,14 @@ export const LatestCookieSection = ({
   return (
     <Box
       sx={{
-        height: { xs: "auto" },
+        height: { xs: "auto", sm: "500px" },
         width: { xs: "100%", sm: "80%" },
         display: "flex",
         alignItems: "center",
         flexDirection: flexDirection,
         padding: "30px",
         flexWrap: "wrap",
-        mb: { xs: "20px", sm: "10px" },
+        mb: { xs: "20px", sm: "20px" },
       }}
     >
       <Box
@@ -29,7 +28,7 @@ export const LatestCookieSection = ({
           justifyContent: "center",
           width: { xs: "100%", sm: "50%" },
           padding: "20px",
-          height: "auto",
+          height: "100%",
         }}
       >
         <Box
@@ -38,18 +37,19 @@ export const LatestCookieSection = ({
           alt={title}
           sx={{
             borderRadius: "20px",
-            objectFit: "fill",
+            objectFit: "cover",
             width: { xs: "100%", sm: "100%" },
             height: "100%",
           }}
         />
       </Box>
       <Box
+        //TODO:if reverse is true, align items to the end, else align items to the start
         sx={{
           width: { xs: "100%", sm: "50%" },
           display: "flex",
           flexDirection: "column",
-          alignItems: { xs: "center", sm: "start" },
+          alignItems: { xs: "center", sm: reverse ? "start" : "end" },
           padding: "20px",
         }}
       >

@@ -1,7 +1,14 @@
-import { Typography, Box, Button, IconButton } from "@mui/material";
+import { useState } from "react";
+import { Typography, Box, IconButton } from "@mui/material";
 import { ArrowUpward } from "@mui/icons-material";
 
 export const ShopCookieCard = ({ cookieTitle, cookieImage, ingredients }) => {
+  const [showIngredients, setShowIngredients] = useState(false);
+
+  const handleToggle = () => {
+    setShowIngredients((prev) => !prev);
+  };
+
   return (
     <Box
       sx={{
@@ -11,15 +18,15 @@ export const ShopCookieCard = ({ cookieTitle, cookieImage, ingredients }) => {
         height: "350px",
         margin: "10px",
         position: "relative",
+        transition: "all 0.3s ease-in-out",
         ":hover": {
           boxShadow: "0 0 10px 0px black",
           transform: { xs: "scale(1.0)", sm: "scale(1.15)" },
-          transition: "all 0.3s ease",
           zIndex: 100,
         },
       }}
     >
-      <Box sx={{ width: "100%", height: "70%" }}>
+      <Box sx={{ width: "100%", height: "70%", position: "relative" }}>
         <Box
           component="img"
           src={cookieImage}
@@ -30,8 +37,37 @@ export const ShopCookieCard = ({ cookieTitle, cookieImage, ingredients }) => {
             height: "100%",
             borderTopLeftRadius: "10px",
             borderTopRightRadius: "10px",
+            transition: "opacity 0.3s ease-in-out",
+            opacity: showIngredients ? 0 : 1,
           }}
         />
+        <Box
+          sx={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: "secondary.light",
+            borderTopLeftRadius: "10px",
+            borderTopRightRadius: "10px",
+            transition: "opacity 0.3s ease-in-out",
+            opacity: showIngredients ? 1 : 0,
+          }}
+        >
+          <Typography
+            sx={{
+              height: "100%",
+              padding: "10px",
+              overflow: "scroll",
+            }}
+          >
+            {ingredients}
+          </Typography>
+        </Box>
       </Box>
       <Box
         sx={{
@@ -55,18 +91,15 @@ export const ShopCookieCard = ({ cookieTitle, cookieImage, ingredients }) => {
             alignItems: "center",
           }}
         >
-          {/* <Button sx={{ mr: "15px" }} variant="contained">
-            Order Now
-          </Button> */}
           <IconButton
-            // color="inherit"
             aria-label="see ingredients"
             edge="start"
+            onClick={handleToggle}
             sx={{
               border: "1px solid black",
               borderRadius: "5px",
-              height: "20px",
-              width: "20px",
+              height: "30px",
+              width: "30px",
             }}
           >
             <ArrowUpward />

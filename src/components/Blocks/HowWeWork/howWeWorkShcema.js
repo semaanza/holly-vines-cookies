@@ -23,7 +23,7 @@ export const HowWeWorkSchema = {
           required: true,
         },
         {
-          type: "string",
+          type: "image",
           name: "image",
           label: "Image",
         },

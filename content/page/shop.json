@@ -7,23 +7,22 @@
           {
             "cookieTitle": "Red Velvet",
             "cookieImage": "/cheesecake.png",
-            "ingrediants": "Red, frosting, cream cheese"
+            "ingredients": "For red velvet cookies (half batch), you'll need one and three-eighths cups of all-purpose flour, two tablespoons of cocoa powder, one teaspoon of baking powder, and an eighth teaspoon of salt. For the wet ingredients, use one stick (half cup) of softened unsalted butter, three-quarters cup of granulated sugar, one large egg, one teaspoon of vanilla extract, and one to one and a half teaspoons of red food coloring. If you plan to make the cream cheese frosting, you'll need four ounces of softened cream cheese and half a cup of powdered sugar. Would you like the baking instructions for this smaller batch?"
           },
           {
             "cookieTitle": "Ultimate Reese's",
             "cookieImage": "/IMG-7918.jpg",
-            "ingrediants": "Reese's chips, Peanut butter, egg"
+            "ingredients": "Reese's, Peanut butter drizel, reeses minis,"
           },
           {},
           {
             "cookieTitle": "Funfetti",
-            "cookieImage": "/Funfetti.jpg",
-            "ingrediants": "sprinkles, white chocolate chips"
+            "cookieImage": "/Funfetti.jpg"
           },
           {
             "cookieTitle": "Chocolate Chip",
             "cookieImage": "/0.jpg",
-            "ingrediants": "Chips, flour"
+            "ingredients": "This chocolate chip cookie delivers buttery, golden-brown perfection with a satisfyingly chewy center. The generous chocolate chunks create rich pockets of sweetness, while hints of vanilla and brown sugar round out the classic homestyle flavor."
           }
         ]
       },

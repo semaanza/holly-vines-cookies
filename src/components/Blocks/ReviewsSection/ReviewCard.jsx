@@ -1,7 +1,10 @@
 import { Box, Typography } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
 
-export const ReviewCard = () => {
+export const ReviewCard = ({
+  name = "John Doe",
+  review = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum mollitia dolorum obcaecati. Amet labore cumque ipsa sapiente officia eos doloribus nobis.",
+}) => {
   return (
     <Box
       sx={{
@@ -22,12 +25,8 @@ export const ReviewCard = () => {
         <StarIcon />
         <StarIcon />
       </Box>
-      <Typography variant="body1">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum mollitia
-        dolorum obcaecati. Amet labore cumque ipsa sapiente officia eos
-        doloribus nobis.
-      </Typography>
-      <Typography variant="h6">- John Doe</Typography>
+      <Typography variant="body1">{review}</Typography>
+      <Typography variant="h6">- {name}</Typography>
     </Box>
   );
 };

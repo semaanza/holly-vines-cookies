@@ -14,11 +14,13 @@ export const Promise = ({
         height: { xs: "auto" },
         width: "100%",
         padding: "30px",
-        mb: { xs: "20px", sm: "10px" },
         display: "flex",
         alignItems: "center",
         flexDirection: "column",
         flexWrap: "wrap",
+        backgroundColor: "primary.main",
+        pb: { xs: "75px", sm: "100px" },
+        pt: { xs: "75px", sm: "100px" },
       }}
     >
       <Box
@@ -34,7 +36,7 @@ export const Promise = ({
             display: "flex",
             flexDirection: "row",
             width: "100%",
-            marginBottom: 2,
+            marginBottom: 4,
             flexWrap: "wrap",
           }}
         >
@@ -55,9 +57,9 @@ export const Promise = ({
               flexDirection: "column",
             }}
           >
-            <Typography>{description}</Typography>
+            <Typography variant="h5">{description}</Typography>
             <Box mt={2}>
-              <Button size="small" variant="contained">
+              <Button size="small" variant="contained" color="secondary">
                 {cta}
               </Button>
             </Box>

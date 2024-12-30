@@ -1,6 +1,6 @@
 import { Box, Button, Typography } from "@mui/material";
 
-export const HeroBanner = ({ data }) => {
+export const HeroBanner = ({ mainImage, title, description }) => {
   return (
     <Box
       sx={{
@@ -10,8 +10,8 @@ export const HeroBanner = ({ data }) => {
         backgroundColor: "lightgray",
         width: "100%",
         height: "100%",
-        // backgroundImage: `url(${data?.heroImage})`,
-        backgroundImage: "url('https://picsum.photos/2')",
+        backgroundImage: `url(${mainImage})`,
+        // backgroundImage: "url('https://picsum.photos/2')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -30,10 +30,10 @@ export const HeroBanner = ({ data }) => {
         }}
       >
         <Typography variant="h3" sx={{ textAlign: "left", mb: "20px" }}>
-          Delicious Homemade Cookies{" "}
+          {title}
         </Typography>
         <Typography variant="h6" sx={{ textAlign: "left", mb: "40px" }}>
-          Freshly baked treats to your door{" "}
+          {description}
         </Typography>
         <Button
           variant="contained"
