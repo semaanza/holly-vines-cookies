@@ -17,6 +17,7 @@ export const Header = ({ data }) => {
         justifyContent: "space-between",
         alignItems: "center",
         width: "100%",
+        height: { xs: "56px", sm: "64px" },
       }}
     >
       <AppBar component="nav" sx={{ width: "100%" }}>

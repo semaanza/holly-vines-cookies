@@ -44,18 +44,19 @@ export const LatestCookieSection = ({
         />
       </Box>
       <Box
-        //TODO:if reverse is true, align items to the end, else align items to the start
         sx={{
           width: { xs: "100%", sm: "50%" },
           display: "flex",
           flexDirection: "column",
-          alignItems: { xs: "center", sm: reverse ? "start" : "end" },
+          alignItems: { xs: "center", sm: "start" },
           padding: "20px",
         }}
       >
         <h2>{title}</h2>
         <Typography sx={{ mb: "20px" }}>{description}</Typography>
-        <Button variant="contained">Order Now</Button>
+        <Button variant="contained" href="/contact">
+          Order Now
+        </Button>
       </Box>
     </Box>
   );

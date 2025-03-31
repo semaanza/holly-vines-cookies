@@ -36,6 +36,7 @@ export const LetsTalkContentBox = ({ title, description }) => {
         size="small"
         variant="contained"
         fullWidth={false}
+        href="/contact"
         sx={{
           backgroundColor: "green",
           color: "white",

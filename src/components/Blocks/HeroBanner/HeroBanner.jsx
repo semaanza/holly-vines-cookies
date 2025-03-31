@@ -11,7 +11,6 @@ export const HeroBanner = ({ mainImage, title, description }) => {
         width: "100%",
         height: "100%",
         backgroundImage: `url(${mainImage})`,
-        // backgroundImage: "url('https://picsum.photos/2')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -19,26 +18,34 @@ export const HeroBanner = ({ mainImage, title, description }) => {
       <Box
         sx={{
           display: "flex",
-
           flexDirection: "column",
           width: { xs: "auto", sm: 400 },
           height: "auto",
           pl: { xs: "30px", sm: "60px" },
-          // opacity: "0.5",
+          pr: "30px",
           position: "absolute",
-          //backgroundColor: "inherit",
         }}
       >
-        <Typography variant="h3" sx={{ textAlign: "left", mb: "20px" }}>
-          {title}
-        </Typography>
-        <Typography variant="h6" sx={{ textAlign: "left", mb: "40px" }}>
-          {description}
-        </Typography>
+        <Box
+          sx={{
+            backgroundColor: "white",
+            p: 1,
+            borderRadius: "10px",
+            mb: 2,
+            opacity: 0.8,
+          }}
+        >
+          <Typography variant="h3" sx={{ textAlign: "left", mb: "20px" }}>
+            {title}
+          </Typography>
+          <Typography variant="h6" sx={{ textAlign: "left", mb: "40px" }}>
+            {description}
+          </Typography>
+        </Box>
         <Button
           variant="contained"
           href="/contact"
-          sx={{ width: { xs: "40%" } }}
+          sx={{ width: { xs: "100%", sm: "50%" } }}
         >
           Order Now
         </Button>

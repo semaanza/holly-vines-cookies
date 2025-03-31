@@ -1,6 +1,12 @@
 import { useState } from "react";
 import { Typography, Box, IconButton } from "@mui/material";
-import { ArrowUpward } from "@mui/icons-material";
+import {
+  ArrowUpward,
+  AddCircleOutlineOutlined,
+  ArrowUpwardOutlined,
+  ArrowUpwardTwoTone,
+} from "@mui/icons-material";
+import { useCookieCart } from "../../../store";
 
 export const ShopCookieCard = ({ cookieTitle, cookieImage, ingredients }) => {
   const [showIngredients, setShowIngredients] = useState(false);
@@ -9,6 +15,12 @@ export const ShopCookieCard = ({ cookieTitle, cookieImage, ingredients }) => {
     setShowIngredients((prev) => !prev);
   };
 
+  // const { addToCart } = useCookieCart((state) => ({
+  //   addToCart: state.addToCart,
+  // }));
+  // const handleAddToCart = () => {
+  //   addToCart({ name: cookieTitle, image: cookieImage, ingredients });
+  // };
   return (
     <Box
       sx={{
@@ -82,27 +94,45 @@ export const ShopCookieCard = ({ cookieTitle, cookieImage, ingredients }) => {
           borderBottomRightRadius: "10px",
         }}
       >
-        <Typography sx={{ width: "50%" }}>{cookieTitle}</Typography>
+        <Typography variant="h5" sx={{ width: "50%" }}>
+          {cookieTitle}
+        </Typography>
         <Box
           sx={{
             width: "50%",
             display: "flex",
-            justifyContent: "flex-end",
+            justifyContent: "right",
             alignItems: "center",
           }}
         >
           <IconButton
+            aria-label="add to cart"
+            // edge="start"
+            onClick={() => {
+              // handleAddToCart(cookieTitle);
+              console.log(`Adding ${cookieTitle} to cart`);
+            }}
+            sx={{
+              height: "50px",
+              width: "50px",
+            }}
+          >
+            <AddCircleOutlineOutlined
+              sx={{
+                fontSize: { xs: "60px", sm: "40px" },
+                mr: { xs: "30px", sm: "0px" },
+              }}
+            />
+          </IconButton>
+          <IconButton
             aria-label="see ingredients"
-            edge="start"
             onClick={handleToggle}
             sx={{
-              border: "1px solid black",
-              borderRadius: "5px",
               height: "30px",
               width: "30px",
             }}
           >
-            <ArrowUpward />
+            <ArrowUpwardTwoTone sx={{ fontSize: { xs: "60px", sm: "40px" } }} />
           </IconButton>
         </Box>
       </Box>

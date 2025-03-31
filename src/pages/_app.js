@@ -1,7 +1,6 @@
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import { Layout } from "@/components/Layout/Layout";
-import { Children } from "react";
 
 const theme = createTheme({
   palette: {
