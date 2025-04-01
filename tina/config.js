@@ -17,8 +17,10 @@ const branch = process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || "main";
 
 export default defineConfig({
   branch,
-  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID ?? "", // Get this from tina.io
-  token: process.env.TINA_TOKEN ?? "", // Get this from tina.io
+  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID ?? "",
+  // Get this from tina.io
+  token: process.env.TINA_TOKEN ?? "",
+  // Get this from tina.io
 
   build: {
     outputFolder: "admin",
@@ -41,7 +43,8 @@ export default defineConfig({
             type: "string",
             name: "title",
             label: "Title",
-            //list:true, //For adding multple items of the same EX: multiple cookie components
+            //list:true,
+            //For adding multple items of the same EX: multiple cookie components
             isTitle: true,
             required: true,
           },
