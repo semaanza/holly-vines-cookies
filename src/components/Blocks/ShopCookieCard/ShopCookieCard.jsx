@@ -6,21 +6,30 @@ import {
   ArrowUpwardOutlined,
   ArrowUpwardTwoTone,
 } from "@mui/icons-material";
-import { useCookieCart } from "../../../store";
+import { useCart } from "../../../store";
 
-export const ShopCookieCard = ({ cookieTitle, cookieImage, ingredients }) => {
+export const ShopCookieCard = ({
+  cookieTitle,
+  cookieImage,
+  ingredients,
+  price = 3.5,
+  id,
+}) => {
   const [showIngredients, setShowIngredients] = useState(false);
 
+  const cookie = {
+    name: cookieTitle,
+    image: cookieImage,
+    ingredients,
+    price,
+    id,
+  };
   const handleToggle = () => {
     setShowIngredients((prev) => !prev);
   };
 
-  // const { addToCart } = useCookieCart((state) => ({
-  //   addToCart: state.addToCart,
-  // }));
-  // const handleAddToCart = () => {
-  //   addToCart({ name: cookieTitle, image: cookieImage, ingredients });
-  // };
+  const addItem = useCart((store) => store.addItem);
+
   return (
     <Box
       sx={{
@@ -94,9 +103,17 @@ export const ShopCookieCard = ({ cookieTitle, cookieImage, ingredients }) => {
           borderBottomRightRadius: "10px",
         }}
       >
-        <Typography variant="h5" sx={{ width: "50%" }}>
-          {cookieTitle}
-        </Typography>
+        <Box
+          sx={{
+            width: "50%",
+            display: "flex",
+            alignItems: "flex-start",
+            flexDirection: "column",
+          }}
+        >
+          <Typography variant="h5">{cookieTitle}</Typography>
+          <Typography variant="body1">{price.toFixed(2)}</Typography>
+        </Box>
         <Box
           sx={{
             width: "50%",
@@ -107,11 +124,7 @@ export const ShopCookieCard = ({ cookieTitle, cookieImage, ingredients }) => {
         >
           <IconButton
             aria-label="add to cart"
-            // edge="start"
-            onClick={() => {
-              // handleAddToCart(cookieTitle);
-              console.log(`Adding ${cookieTitle} to cart`);
-            }}
+            onClick={() => addItem(cookie)}
             sx={{
               height: "50px",
               width: "50px",

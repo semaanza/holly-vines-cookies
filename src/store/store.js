@@ -1,21 +1,56 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
-export const useCookieCart = create()(
+export const useCart = create()(
   persist(
     (set, get) => ({
       cart: [],
-      addItem: (name, price) => {
+      addItem: (cookie) => {
         const { cart } = get();
-        const updatedCart = addToCart(cart, name, price);
+        console.log("cart", cart);
+        const updatedCart = addCookie(cart, cookie);
         set({ cart: updatedCart });
       },
-      removeFromCart: (id) => {
+      removeItem: (cookie) => {
         const cart = get().cart;
+        console.log("removeItemFromCart", cookie);
+        const id = cookie.id;
         set({ cart: cart.filter((item) => item.id !== id) });
       },
       clearCart: () => {
         set({ cart: [] });
+      },
+      increaseQuantity: (cookie) => {
+        const cart = get().cart;
+        const updatedCart = cart.map((item) =>
+          item.id === cookie.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        );
+        set({ cart: updatedCart });
+      },
+      decreaseQuantity: (cookie) => {
+        const cart = get().cart;
+        if (cookie.quantity === 1) {
+          return;
+        }
+        const updatedCart = cart.map((item) =>
+          item.id === cookie.id
+            ? { ...item, quantity: item.quantity - 1 }
+            : item
+        );
+        set({ cart: updatedCart });
+      },
+      getTotalItems: () => {
+        const cart = get().cart;
+        return cart.reduce((acc, item) => acc + item.quantity * 6, 0);
+      },
+      getTotalPrice: () => {
+        const cart = get().cart;
+        return cart.reduce(
+          (acc, item) => acc + item.price * (item.quantity * 6),
+          0
+        );
       },
     }),
     {
@@ -24,35 +59,14 @@ export const useCookieCart = create()(
   )
 );
 
-const addCookie = (cookie) => {
-  const cart = useCookieCart.getState().cart;
-  const item = cart?.find((item) => item.name === cookie.name);
-  if (item) {
-    return cart.map((item) => {
-      if (item.name === cookie.name) {
-        const itemQuantity = item.quantity >= 1 ? item.quantity : 1;
-        return { ...item, quantity: itemQuantity };
-      }
-      return item;
-    });
+const addCookie = (cart, cookie) => {
+  console.log(cookie, "cookie");
+  const existingItem = cart.find((item) => item.id === cookie.id);
+  if (existingItem) {
+    return cart.map((item) =>
+      item.id === cookie.id ? { ...item, quantity: item.quantity + 1 } : item
+    );
+  } else {
+    return [...cart, { ...cookie, quantity: 1 }];
   }
-  return [...cart, { item, quantity: 1, name: cookie.name, price: price }];
 };
-const removeCookie = (id) => {
-  const cart = useCookieCart.getState().cart;
-  useCookieCart.setState({ cart: cart.filter((item) => item.id !== id) });
-};
-const clearCart = () => {
-  useCookieCart.setState({ cart: [] });
-};
-const getCart = () => {
-  return useCookieCart.getState().cart;
-};
-// const getTotalItems = () => {
-//   const cart = useCookieCart.getState().cart;
-//   return cart.reduce((acc, item) => acc + item.quantity, 0);
-// };
-// const getTotalPrice = () => {
-//   const cart = useCookieCart.getState().cart;
-//   return cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
-// };

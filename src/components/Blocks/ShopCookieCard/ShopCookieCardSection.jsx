@@ -3,6 +3,7 @@ import { ShopCookieCard } from "./ShopCookieCard";
 
 export const ShopCookieCardSection = (data) => {
   const cookies = data.block[0].shopCookieCard.shopCookieCard;
+
   return (
     <>
       <Box
@@ -35,15 +36,9 @@ export const ShopCookieCardSection = (data) => {
         }}
       >
         {/*map through cards here */}
-        {cookies.map((cookie) => (
-          <ShopCookieCard
-            key={cookie.id + cookie.cookieTitle}
-            cookieTitle={cookie.cookieTitle}
-            cookieImage={cookie.cookieImage}
-            ingredients={cookie.ingredients}
-          />
+        {cookies.map((cookie, i) => (
+          <ShopCookieCard key={i + cookie.cookieTitle} id={i + 1} {...cookie} />
         ))}
-        <ShopCookieCard />
       </Box>
     </>
   );

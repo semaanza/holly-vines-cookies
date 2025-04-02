@@ -1,11 +1,10 @@
+"use client";
 import React, { useState } from "react";
 import { Box, Badge, Typography } from "@mui/material";
 import { ShoppingCart } from "@mui/icons-material";
-
-// construct a component that will link to the cart page and is always floating in the upper right corner of the screen with a notifications badge.
+import { useCart } from "../../store/store";
 
 export const CartLink = () => {
-  //hover effect on the cart icon
   const [hover, setHover] = useState(false);
   const handleMouseEnter = () => {
     setHover(true);
@@ -13,6 +12,7 @@ export const CartLink = () => {
   const handleMouseLeave = () => {
     setHover(false);
   };
+  const totalItems = useCart((state) => state.cart.length || 0);
 
   return (
     <Box
@@ -41,7 +41,9 @@ export const CartLink = () => {
       }}
     >
       <Badge
-        badgeContent={<Typography sx={{ color: "white" }}>0</Typography>}
+        badgeContent={
+          <Typography sx={{ color: "white" }}>{totalItems}</Typography>
+        }
         color="primary"
       >
         <ShoppingCart

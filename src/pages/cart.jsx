@@ -1,13 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Box, Button } from "@mui/material";
 import { CartItem } from "@/components/CartItem";
 import { useCart } from "../store";
 
 export default function cart() {
-  const { cookieCart, total } = useCart((state) => ({
-    cookieCart: state.cookieCart,
-    total: state.total,
-  }));
+  const cartItems = useCart((state) => state.cart);
+  console.log("cartItems", cartItems);
+
+  const clearCart = useCart((state) => state.clearCart);
+  const getTotalItems = useCart((state) => state.getTotalItems);
+  const getTotalPrice = useCart((state) => state.getTotalPrice);
+
+  const [totalItems, setTotalItems] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(0);
+
+  useEffect(() => {
+    setTotalItems(getTotalItems());
+    setTotalPrice(getTotalPrice());
+  }, [cartItems, getTotalItems, getTotalPrice]);
 
   return (
     <Box
@@ -23,9 +33,11 @@ export default function cart() {
         {/* probably a good spot to add disclaimers about the amount of cookies and pricing per half dozen */}
 
         {/* map through cart items */}
-        {cookieCart.map((cookie, i) => (
-          <CartItem key={i} cookie={cookie} />
-        ))}
+        {cartItems?.length ? (
+          cartItems.map((cookie, i) => <CartItem key={i} cookie={cookie} />)
+        ) : (
+          <h2>Your cart is empty</h2>
+        )}
       </Box>
       <Box
         sx={{
@@ -49,8 +61,8 @@ export default function cart() {
             width: { xs: "100%", sm: "33%" },
           }}
         >
-          <h5>Total:</h5>
-          <h5>{total}</h5>
+          <h4>Total:</h4>
+          <h4>${totalPrice.toFixed(2)}</h4>
           <Button
             variant="contained"
             size="small"
@@ -68,7 +80,8 @@ export default function cart() {
             color="primary"
             onClick={() => {
               // handle clear cart
-              // clearCart();
+              console.log("Clearing cart");
+              clearCart();
             }}
           >
             Clear Cart

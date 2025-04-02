@@ -14,7 +14,6 @@
             "cookieImage": "/IMG-7918.jpg",
             "ingredients": "Reese's, Peanut butter drizel, reeses minis,"
           },
-          {},
           {
             "cookieTitle": "Funfetti",
             "cookieImage": "/Funfetti.jpg"
@@ -23,11 +22,6 @@
             "cookieTitle": "Chocolate Chip",
             "cookieImage": "/0.jpg",
             "ingredients": "This chocolate chip cookie delivers buttery, golden-brown perfection with a satisfyingly chewy center. The generous chocolate chunks create rich pockets of sweetness, while hints of vanilla and brown sugar round out the classic homestyle flavor."
-          },
-          {
-            "cookieTitle": "test",
-            "cookieImage": "/bread1.png",
-            "ingredients": "test"
           }
         ]
       },

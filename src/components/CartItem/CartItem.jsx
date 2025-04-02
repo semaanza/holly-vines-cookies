@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Box, Typography, Button } from "@mui/material";
 import { Counter } from "./Counter";
-import { useCart } from "../store";
+import { useCart } from "../../store";
 
 export const CartItem = ({ cookie }) => {
-  const { removeFromCart } = useCart((state) => ({
-    removeFromCart: state.removeFromCart,
-  }));
+  const [quantity, setQuantity] = useState(cookie.quantity);
+  const removeItem = useCart((store) => store.removeItem);
+  const increaseQuantity = useCart((store) => store.increaseQuantity);
+  const decreaseQuantity = useCart((store) => store.decreaseQuantity);
+
+  const cookiePriceTotal = (cookie.quantity * 6 * cookie.price).toFixed(2);
+
+  useEffect(() => {
+    setQuantity(cookie.quantity);
+  }, [cookie.quantity]);
+
   return (
     <Box
       sx={{
@@ -21,21 +29,17 @@ export const CartItem = ({ cookie }) => {
       }}
     >
       <Typography variant="h7">{cookie.name}</Typography>
-      <Typography variant="body1">${cookie.price}</Typography>
+      <Typography variant="body1">${cookie.price.toFixed(2)}</Typography>
       {/* add counter component below for quick edits */}
-      <Counter quantity={cookie.quantity} />
-      <Typography variant="body2">
-        Total: ${(cookie.price * cookie.quantity).toFixed(2)}
-      </Typography>
-      {/* add remove button below */}
-      <Button
-        size="small"
-        onClick={() => {
-          // handle remove from cart
-          removeFromCart(cookie.name);
-          console.log(`Removing ${cookie.name} from cart`);
-        }}
-      >
+      <Counter
+        quantity={quantity * 6}
+        // onClick={() => decreaseItemQuantity(cartItem.name)}
+
+        increaseQuantity={() => increaseQuantity(cookie)}
+        decreaseQuantity={() => decreaseQuantity(cookie)}
+      />
+      <Typography variant="body2">Total: ${cookiePriceTotal}</Typography>
+      <Button size="small" onClick={() => removeItem(cookie)}>
         Remove
       </Button>
     </Box>
