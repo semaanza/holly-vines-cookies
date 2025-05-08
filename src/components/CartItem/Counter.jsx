@@ -1,14 +1,19 @@
 import React from "react";
-import { Box, Button, IconButton, Typography } from "@mui/material";
+import { Box, IconButton, Typography } from "@mui/material";
+import { Add, Remove } from "@mui/icons-material";
 
 export const Counter = ({ quantity, decreaseQuantity, increaseQuantity }) => {
   return (
     <Box
       sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
     >
-      <IconButton onClick={decreaseQuantity}>-</IconButton>
+      <IconButton onClick={decreaseQuantity} disableRipple>
+        <Remove />
+      </IconButton>
       <Typography>{quantity}</Typography>
-      <IconButton onClick={increaseQuantity}>+</IconButton>
+      <IconButton onClick={increaseQuantity} disableRipple>
+        <Add />
+      </IconButton>
     </Box>
   );
 };

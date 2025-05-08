@@ -67,7 +67,7 @@ export const Header = ({ data }) => {
             <Button
               sx={{ color: "white", backgroundColor: "green" }}
               variant=""
-              href="/contact"
+              href="/shop"
             >
               Order Now
             </Button>

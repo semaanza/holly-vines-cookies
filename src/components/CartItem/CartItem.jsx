@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Box, Typography, Button } from "@mui/material";
+import { Box, Typography, Button, Grid } from "@mui/material";
 import { Counter } from "./Counter";
 import { useCart } from "../../store";
 
@@ -10,14 +10,8 @@ export const CartItem = ({ cookie }) => {
   const decreaseQuantity = useCart((store) => store.decreaseQuantity);
 
   const cookiePriceTotal = (cookie.quantity * 6 * cookie.price).toFixed(2);
-
-  useEffect(() => {
-    setQuantity(cookie.quantity);
-  }, [cookie.quantity]);
-
-  return (
-    <Box
-      sx={{
+  {
+    /* sx={{
         display: "flex",
         flexDirection: "row",
         padding: "4px",
@@ -26,22 +20,45 @@ export const CartItem = ({ cookie }) => {
         marginBottom: "1rem",
         justifyContent: "space-between",
         alignItems: "center",
+      }} */
+  }
+  useEffect(() => {
+    setQuantity(cookie.quantity);
+  }, [cookie.quantity]);
+
+  return (
+    <Box
+      sx={{
+        display: "flex",
+        // flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "space-between",
+        border: "1px solid #ccc",
+        mb: "10px",
+        padding: "4px",
+        borderRadius: "8px",
       }}
     >
-      <Typography variant="h7">{cookie.name}</Typography>
-      <Typography variant="body1">${cookie.price.toFixed(2)}</Typography>
+      <Grid item xs={2}>
+        <Typography variant="h7">{cookie.name}</Typography>
+      </Grid>
+      <Grid item xs={2}>
+        <Typography variant="body1">${cookie.price.toFixed(2)}</Typography>
+      </Grid>
       {/* add counter component below for quick edits */}
-      <Counter
-        quantity={quantity * 6}
-        // onClick={() => decreaseItemQuantity(cartItem.name)}
-
-        increaseQuantity={() => increaseQuantity(cookie)}
-        decreaseQuantity={() => decreaseQuantity(cookie)}
-      />
-      <Typography variant="body2">Total: ${cookiePriceTotal}</Typography>
-      <Button size="small" onClick={() => removeItem(cookie)}>
-        Remove
-      </Button>
+      <Grid item xs={2}>
+        <Counter
+          quantity={quantity * 6}
+          increaseQuantity={() => increaseQuantity(cookie)}
+          decreaseQuantity={() => decreaseQuantity(cookie)}
+        />
+      </Grid>
+      <Grid item xs={2} sx={{ display: "flex", justifyContent: "center" }}>
+        <Typography variant="body2">${cookiePriceTotal}</Typography>
+      </Grid>
+      <Grid item xs={2} sx={{ display: "flex", justifyContent: "flex-end" }}>
+        <Button onClick={() => removeItem(cookie)}>Remove</Button>
+      </Grid>
     </Box>
   );
 };

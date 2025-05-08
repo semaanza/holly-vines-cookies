@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Box, Button } from "@mui/material";
-import { CartItem } from "@/components/CartItem";
+import { Box, Button, Grid, Snackbar, Alert } from "@mui/material";
+import { CartItem, CartItemHeading } from "@/components/CartItem";
 import { useCart } from "../store";
+import { CheckoutDialog } from "../components";
 
 export default function cart() {
   const cartItems = useCart((state) => state.cart);
-  console.log("cartItems", cartItems);
 
   const clearCart = useCart((state) => state.clearCart);
   const getTotalItems = useCart((state) => state.getTotalItems);
@@ -13,6 +13,23 @@ export default function cart() {
 
   const [totalItems, setTotalItems] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
+  const [open, setOpen] = useState(false);
+  const [snackbar, setSnackbar] = useState({
+    open: false,
+    message: "",
+    severity: "success",
+  });
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const handleCloseSnackbar = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setSnackbar({ ...snackbar, open: false });
+  };
 
   useEffect(() => {
     setTotalItems(getTotalItems());
@@ -22,23 +39,33 @@ export default function cart() {
   return (
     <Box
       sx={{
-        padding: "1rem",
+        padding: { xs: 1, sm: 2 },
         display: "flex",
         flexDirection: "column",
       }}
     >
       <h1>Cart</h1>
-      <Box>
+      <Grid
+        container
+        spacing={2}
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          padding: 2,
+        }}
+      >
         <h2>Cookies in your cart:</h2>
         {/* probably a good spot to add disclaimers about the amount of cookies and pricing per half dozen */}
 
         {/* map through cart items */}
+        <CartItemHeading />
         {cartItems?.length ? (
           cartItems.map((cookie, i) => <CartItem key={i} cookie={cookie} />)
         ) : (
-          <h2>Your cart is empty</h2>
+          <h3>Your cart is empty</h3>
         )}
-      </Box>
+      </Grid>
+
       <Box
         sx={{
           display: "flex",
@@ -68,12 +95,34 @@ export default function cart() {
             size="small"
             color="primary"
             onClick={() => {
-              // handle checkout
-              console.log("Checking out");
+              setOpen(true);
+              console.log("Opening checkout dialog");
             }}
           >
             Checkout
           </Button>
+          <CheckoutDialog
+            totalPrice={totalPrice}
+            cartItems={cartItems}
+            open={open}
+            handleClose={handleClose}
+            snackbar={setSnackbar}
+          />
+          <Snackbar
+            open={snackbar.open}
+            autoHideDuration={2000}
+            onClose={handleCloseSnackbar}
+            anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+            key={"bottom" + "center"}
+          >
+            <Alert
+              onClose={handleCloseSnackbar}
+              severity={snackbar.severity}
+              sx={{ width: "100%" }}
+            >
+              {snackbar.message}
+            </Alert>
+          </Snackbar>
           <Button
             variant="contained"
             size="small"

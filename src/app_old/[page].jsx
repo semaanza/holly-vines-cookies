@@ -5,7 +5,6 @@ import { Layout } from "../components/Layout/Layout";
 import { Blocks } from "../components/renderer";
 
 export default function Page(props) {
-  console.log(props);
   const { data } = useTina({
     query: props.query,
     variables: props.variables,

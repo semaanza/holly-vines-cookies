@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
+    "baseUrl": ".", // Base directory for resolving non-relative module imports
     "paths": {
-      "@/*": ["./src/*"]
-    }
-  }
+      "@/*": ["src/*"] // Alias for the "src" directory
+    },
+    "jsx": "react" // Enable JSX support for React
+  },
+  "include": ["src/**/*"], // Files to include in the project
+  "exclude": ["node_modules", "dist"] // Files or directories to exclude
 }

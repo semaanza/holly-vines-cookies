@@ -32,7 +32,7 @@ export const ReviewsSection = ({ cards }) => {
           flexDirection: "row",
           flexWrap: "wrap",
           width: { xs: "100%", sm: "90%" },
-          alignItems: "center",
+          alignItems: { xs: "center", sm: "baseline" },
           justifyContent: "space-evenly",
         }}
       >

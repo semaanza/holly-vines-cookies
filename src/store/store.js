@@ -7,13 +7,11 @@ export const useCart = create()(
       cart: [],
       addItem: (cookie) => {
         const { cart } = get();
-        console.log("cart", cart);
         const updatedCart = addCookie(cart, cookie);
         set({ cart: updatedCart });
       },
       removeItem: (cookie) => {
         const cart = get().cart;
-        console.log("removeItemFromCart", cookie);
         const id = cookie.id;
         set({ cart: cart.filter((item) => item.id !== id) });
       },
@@ -60,7 +58,6 @@ export const useCart = create()(
 );
 
 const addCookie = (cart, cookie) => {
-  console.log(cookie, "cookie");
   const existingItem = cart.find((item) => item.id === cookie.id);
   if (existingItem) {
     return cart.map((item) =>

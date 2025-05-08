@@ -1,4 +1,29 @@
 {
-  "extends": ["next/core-web-vitals",
-  "prettier"]
+  "env": {
+    "browser": true, // Enables browser global variables
+    "es2021": true // Enables ES2021 features
+  },
+  "extends": [
+    "eslint:recommended", // Use recommended ESLint rules
+    "plugin:react/recommended", // Use recommended React rules
+    "next/core-web-vitals",
+    "prettier"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 12, // Use ECMAScript 2021 syntax
+    "sourceType": "module", // Enable ES modules
+    "ecmaFeatures": {
+      "jsx": true // Enable JSX parsing
+    }
+  },
+  "plugins": ["react"], // Include React plugin
+  "rules": {
+    "react/prop-types": "off", // Example: Disable prop-types rule
+    "no-unused-vars": "warn" // Example: Warn about unused variables
+  },
+  "settings": {
+    "react": {
+      "version": "detect" // Automatically detect React version
+    }
+  }
 }

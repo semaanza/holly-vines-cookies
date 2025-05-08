@@ -1,31 +1,31 @@
 import { Box, Button, Typography } from "@mui/material";
 
 export const HeroBanner = ({ mainImage, title, description }) => {
+  const mainBoxStyle = {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: { xs: "center", sm: "flex-start" },
+    backgroundColor: "lightgray",
+    width: "100%",
+    height: "100%",
+    backgroundImage: `url(${mainImage})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  };
+
+  const subBoxStyle = {
+    display: "flex",
+    flexDirection: "column",
+    width: { xs: "auto", sm: 400 },
+    height: "auto",
+    pl: { xs: "30px", sm: "60px" },
+    pr: "30px",
+    position: "absolute",
+  };
+
   return (
-    <Box
-      sx={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: { xs: "center", sm: "flex-start" },
-        backgroundColor: "lightgray",
-        width: "100%",
-        height: "100%",
-        backgroundImage: `url(${mainImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          width: { xs: "auto", sm: 400 },
-          height: "auto",
-          pl: { xs: "30px", sm: "60px" },
-          pr: "30px",
-          position: "absolute",
-        }}
-      >
+    <Box sx={mainBoxStyle}>
+      <Box sx={subBoxStyle}>
         <Box
           sx={{
             backgroundColor: "white",
@@ -44,7 +44,7 @@ export const HeroBanner = ({ mainImage, title, description }) => {
         </Box>
         <Button
           variant="contained"
-          href="/contact"
+          href="/shop"
           sx={{ width: { xs: "100%", sm: "50%" } }}
         >
           Order Now

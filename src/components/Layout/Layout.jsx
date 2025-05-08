@@ -10,7 +10,7 @@ export const Layout = ({ children }) => {
       <CartLink />
       <main style={{ height: "100vh", paddingTop: { xs: "60px", sm: "64px" } }}>
         {children}
-        <Footer />
+        <Footer logo={layoutData.header.logo.logoImage} />
       </main>
     </>
   );

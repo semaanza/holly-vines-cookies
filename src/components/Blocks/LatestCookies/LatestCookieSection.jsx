@@ -54,7 +54,7 @@ export const LatestCookieSection = ({
       >
         <h2>{title}</h2>
         <Typography sx={{ mb: "20px" }}>{description}</Typography>
-        <Button variant="contained" href="/contact">
+        <Button variant="contained" href="/shop">
           Order Now
         </Button>
       </Box>
